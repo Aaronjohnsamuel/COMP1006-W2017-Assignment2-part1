@@ -8,7 +8,7 @@
 
 include_once('TodesDatabase.php'); // include the database connection file
 
-$gameID = $_GET["todoID"]; // assigns the todoID from the URL
+$todoID = $_GET['id']; // assigns the todoID from the URL
 
 if($todoID == 0) {
     $todoID = null;
@@ -52,12 +52,12 @@ if($todoID == 0) {
                 <div class="form-group">
                     <label for="NameTextField">Todos</label>
                     <input type="text" class="form-control" id="NameTextField"  name="NameTextField"
-                           placeholder="Todos" required  value="<?php echo $todo['Name']; ?>">
+                           placeholder="Todos" value="<?php echo $todo['Name']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="NotesTextField">Notes</label>
                     <input type="text" class="form-control" id="NotesTextField" name="NotesTextField"
-                           placeholder="Notes" required  value="<?php echo $todo['Cost']; ?>">
+                           placeholder="Notes" value="<?php echo $todo['Notes']; ?>">
                 </div>
                 <input type="hidden" name="isAddition" value="<?php echo $isAddition; ?>">
 

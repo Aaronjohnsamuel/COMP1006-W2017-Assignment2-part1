@@ -7,7 +7,7 @@
  */
 include_once('TodesDatabase.php');
 
-$todoID = $_GET["id"]; // assigns the gameID from the URL
+$todoID = $_GET["id"]; // assigns the todoID from the URL
 
 if($todoID != false) {
     $query = "DELETE FROM todos WHERE id = :todo_id ";

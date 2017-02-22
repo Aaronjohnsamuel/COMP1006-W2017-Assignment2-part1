@@ -11,7 +11,7 @@ include_once('TodesDatabase.php');
 $query = "SELECT * FROM todos"; // SQL statement
 $statement = $db->prepare($query); // encapsulate the sql statement
 $statement->execute(); // run on the db server
-$todoes = $statement->fetchAll(); // returns an array
+$todos= $statement->fetchAll(); // returns an array
 $statement->closeCursor(); // close the connection
 ?>
 
@@ -42,11 +42,11 @@ $statement->closeCursor(); // close the connection
                     <th></th>
                     <th>Notes</th>
                 </tr>
-                <?php foreach($todoes as $todo) : ?>
+                <?php foreach($todos as $todo) : ?>
     <tr>
         <td><?php echo $todo['id'] ?></td>
         <td><?php echo $todo['Name'] ?></td>
-        <td><input type="checkbox" name="myTodoCheckBox" value="unchecked" <?php echo $todo['Complete'] ?> /></td>
+        <td><input type="checkbox" name="myTodoCheckBox" value="unchecked" <?php echo $todo['Completed'] ?> /></td>
         <td><?php echo $todo['Notes'] ?></td>
 
         <td><a class="btn btn-primary" href="TodoDetiles.php?todoID=<?php echo $todo['Id'] ?>"><i class="fa fa-pencil-square-o"></i> Edit</a></td>
