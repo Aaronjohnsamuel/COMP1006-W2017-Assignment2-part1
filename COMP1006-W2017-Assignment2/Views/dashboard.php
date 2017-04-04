@@ -1,4 +1,4 @@
-<<div class="container">
+<div class="container">
       <div class="jumbotron">
             <h1><i>Welcome to a Simple CMS Website</i></h1>
           </div>
